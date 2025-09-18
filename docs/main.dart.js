@@ -53204,7 +53204,7 @@ al(){return new A.GJ()}}
 A.GJ.prototype={
 P(a){return new A.pS(new A.a05(),null)}}
 A.a05.prototype={
-$1(a){var s=null,r=a?A.Bc(24,"<App Developer/>"):A.Bc(24,"<Andrea Baldessin/>")
+$1(a){var s=null,r=a?A.Bc(24,"<App Developer Yo/>"):A.Bc(24,"<Andrea Baldessin/>")
 return new A.dQ(new A.an(250,1/0,0,1/0),new A.o7(r,s,s,B.aj,B.f6,s,s),s)},
 $S:360}
 A.zr.prototype={
