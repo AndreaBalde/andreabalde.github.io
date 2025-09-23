@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:my_portfolio/core/utils/context_x.dart';
 import 'package:my_portfolio/core/utils/globals.dart';
+import 'package:my_portfolio/core/widgets/hover_builder.dart';
 import 'package:my_portfolio/core/widgets/text_app.dart';
-import 'package:my_portfolio/features/presentation/widgets/title.dart';
+
+part 'widgets/link_button.dart';
+part 'widgets/title.dart';
+part 'widgets/presentation.dart';
 
 class PortfolioPage extends StatefulWidget {
   const PortfolioPage({super.key});
@@ -36,13 +43,9 @@ class _PortfolioPageState extends State<PortfolioPage> {
         backgroundColor: Color(0xFF363652),
       ),
       body: Container(
+        width: double.infinity,
         color: Color(0xFF181829),
-        child: Center(
-          child: Text(
-            'Welcome to My Portfolio!',
-            style: Theme.of(context).textTheme.bodyMedium,
-          ),
-        ),
+        child: Stack(children: [const Presentation()]),
       ),
     );
   }

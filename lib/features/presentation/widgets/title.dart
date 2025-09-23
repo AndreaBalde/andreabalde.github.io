@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:my_portfolio/core/widgets/hover_builder.dart';
-import 'package:my_portfolio/core/widgets/text_app.dart';
+part of '../portfolio_page.dart';
 
 class TitleApp extends StatefulWidget {
   const TitleApp({super.key});
