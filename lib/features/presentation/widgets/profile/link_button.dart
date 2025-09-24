@@ -1,4 +1,4 @@
-part of '../portfolio_page.dart';
+part of '../../portfolio_page.dart';
 
 class _LinkButton extends StatelessWidget {
   const _LinkButton({

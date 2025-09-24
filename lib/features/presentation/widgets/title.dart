@@ -16,7 +16,7 @@ class _TitleAppState extends State<TitleApp> {
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 1000),
           child: hovering
-              ? TextApp(text: '<App Developer Yo/>', fontSize: 24)
+              ? TextApp(text: '<App Developer/>', fontSize: 24)
               : TextApp(text: '<Andrea Baldessin/>', fontSize: 24),
         ),
       ),
