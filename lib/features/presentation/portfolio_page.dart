@@ -8,6 +8,7 @@ import 'package:my_portfolio/core/utils/globals.dart';
 import 'package:my_portfolio/core/utils/link.dart';
 import 'package:my_portfolio/core/widgets/hover_builder.dart';
 import 'package:my_portfolio/core/widgets/text_app.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 part 'widgets/profile/link_button.dart';
@@ -17,6 +18,7 @@ part 'widgets/profile/profile_image.dart';
 part 'widgets/profile/profile_identifier.dart';
 part 'widgets/profile/profile_description.dart';
 part 'widgets/profile/link_buttons.dart';
+part 'widgets/app_bar.dart';
 
 class PortfolioPage extends StatefulWidget {
   const PortfolioPage({super.key});
@@ -26,30 +28,12 @@ class PortfolioPage extends StatefulWidget {
 }
 
 class _PortfolioPageState extends State<PortfolioPage> {
+  bool get isDesktop => ResponsiveBreakpoints.of(context).largerThan(TABLET);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          TextButton(
-            onPressed: () {},
-            child: TextApp(text: "About me"),
-          ),
-          width20,
-          TextButton(
-            onPressed: () {},
-            child: TextApp(text: "Hobby"),
-          ),
-          width20,
-          TextButton(
-            onPressed: () {},
-            child: TextApp(text: "Contact"),
-          ),
-          width30,
-        ],
-        title: Row(children: [width30, TitleApp()]),
-        backgroundColor: Color(0xFF363652),
-      ),
+      appBar: const DesktopAppBar(),
+
       body: Container(
         width: double.infinity,
         color: Color(0xFF181829),
