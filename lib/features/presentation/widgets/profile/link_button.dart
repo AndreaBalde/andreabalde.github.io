@@ -7,11 +7,11 @@ class _LinkButton extends StatelessWidget {
     required this.name,
   });
 
-  final IconData icon;
+  final Widget icon;
   final VoidCallback onPressed;
   final String name;
 
-  final size = 40.0;
+  final size = 45.0;
 
   @override
   Widget build(BuildContext context) {
@@ -21,13 +21,10 @@ class _LinkButton extends StatelessWidget {
         height: size,
         width: size,
         decoration: BoxDecoration(
-          color: const Color(0xFF3A9048),
+          color: const Color(0xFF388e3c),
           borderRadius: BorderRadius.circular(100),
         ),
-        child: IconButton(
-          icon: Icon(icon, color: Color(0xFF181829)),
-          onPressed: onPressed,
-        ),
+        child: IconButton(icon: icon, onPressed: onPressed),
       ),
     );
   }

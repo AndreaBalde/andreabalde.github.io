@@ -6,30 +6,38 @@ class DesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      actions: context.isDesktop ? desktopActions() : mobileActions(),
-      title: Row(children: [width30, TitleApp()]),
-      backgroundColor: Color(0xFF363652),
+      actions: context.isDesktop ? desktopActions(context) : mobileActions(),
+      title: Row(
+        children: [
+          width30,
+          Text(
+            '<Andrea Baldessin />',
+            style: context.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
+          ),
+        ],
+      ),
+      backgroundColor: Color(0xFF2c2c2c),
     );
   }
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
-  List<Widget> desktopActions() {
+  List<Widget> desktopActions(BuildContext context) {
     return [
       TextButton(
         onPressed: () {},
-        child: TextApp(text: "About me"),
+        child: Text("About me", style: context.bodyMedium),
       ),
       width20,
       TextButton(
         onPressed: () {},
-        child: TextApp(text: "Hobby"),
+        child: Text("Hobby", style: context.bodyMedium),
       ),
       width20,
       TextButton(
         onPressed: () {},
-        child: TextApp(text: "Contact"),
+        child: Text("Contact", style: context.bodyMedium),
       ),
       width30,
     ];

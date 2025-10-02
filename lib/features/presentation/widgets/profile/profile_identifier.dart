@@ -8,33 +8,40 @@ class _ProfileIdentifier extends StatelessWidget {
     final maxWidth = context.isDesktop
         ? context.width * 0.4
         : context.width * 0.6;
-    final nameSize = context.isDesktop ? 34.0 : 30.0;
-    final textSize = context.isDesktop ? 40.0 : 36.0;
     return ConstrainedBox(
       constraints: BoxConstraints(maxWidth: maxWidth),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Ciao, I'm Andrea",
-            style: TextStyle(
-              fontSize: nameSize,
-              color: Colors.white,
-              fontWeight: FontWeight.normal,
-              fontFamily: GoogleFonts.roboto().fontFamily,
+          RichText(
+            text: TextSpan(
+              children: [
+                TextSpan(
+                  text: "Hi,",
+                  style: context.headlineLarge?.copyWith(
+                    color: Color(0xFF388e3c),
+                  ),
+                ),
+                TextSpan(text: " I'm Andrea", style: context.headlineLarge),
+              ],
             ),
           ),
-          height10,
           Text(
             "Mobile App Developer",
-            style: TextStyle(
-              fontSize: textSize,
-              fontWeight: FontWeight.w600,
-              color: Color(0xFF3A9048),
-              fontFamily: GoogleFonts.roboto().fontFamily,
-            ),
-            maxLines: 2,
+            style: context.headlineSmall?.copyWith(color: Color(0xFF388e3c)),
           ),
+          height30,
+          Text(
+            "I'm a dedicated and passionate Mobile App Developer with a strong focus on creating intuitive and high-performance applications. "
+            "My journey into the world of programming started with a fascination for how technology can solve real-world problems.\n\n"
+            "Over the years, I've honed my skills in Flutter and Dart, allowing me to build cross-platform applications that are both beautiful and functional. "
+            "I enjoy every aspect of the development process, from the initial concept and design to deployment and maintenance. When I'm not coding, "
+            "I enjoy exploring new technologies, contributing to open-source projects, and hiking in the mountains. "
+            "I believe in continuous learning and am always looking for new challenges to grow as a developer and as a person.",
+            style: context.bodyLarge?.copyWith(height: 1.5),
+          ),
+          height20,
+          _LinkButtons(),
         ],
       ),
     );

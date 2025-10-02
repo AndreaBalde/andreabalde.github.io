@@ -8,7 +8,7 @@ class Presentation extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(
         top: context.height * 0.1,
-        left: context.width * 0.05,
+        right: context.width * 0.05,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -16,16 +16,10 @@ class Presentation extends StatelessWidget {
         children: [
           Row(
             children: [
-              const _ProfileImage(),
-              width30,
-              const _ProfileIdentifier(),
+              Expanded(flex: 5, child: const _ProfileImage()),
+              Expanded(flex: 7, child: const _ProfileIdentifier()),
             ],
           ),
-          height30,
-          const _ProfileDescription(),
-          height30,
-
-          _LinkButtons(),
         ],
       ),
     );
