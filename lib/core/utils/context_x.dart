@@ -46,9 +46,9 @@ extension ContextX on BuildContext {
     if (isDesktop) {
       return textTheme.bodyLarge;
     } else if (isTablet) {
-      return textTheme.bodyLarge?.copyWith(fontSize: 18);
-    } else {
       return textTheme.bodyLarge?.copyWith(fontSize: 16);
+    } else {
+      return textTheme.bodyLarge?.copyWith(fontSize: 14);
     }
   }
 
@@ -56,9 +56,9 @@ extension ContextX on BuildContext {
     if (isDesktop) {
       return textTheme.bodyMedium;
     } else if (isTablet) {
-      return textTheme.bodyMedium?.copyWith(fontSize: 16);
-    } else {
       return textTheme.bodyMedium?.copyWith(fontSize: 14);
+    } else {
+      return textTheme.bodyMedium?.copyWith(fontSize: 12);
     }
   }
 
@@ -66,9 +66,9 @@ extension ContextX on BuildContext {
     if (isDesktop) {
       return textTheme.bodySmall;
     } else if (isTablet) {
-      return textTheme.bodySmall?.copyWith(fontSize: 14);
-    } else {
       return textTheme.bodySmall?.copyWith(fontSize: 12);
+    } else {
+      return textTheme.bodySmall?.copyWith(fontSize: 10);
     }
   }
 
@@ -76,9 +76,9 @@ extension ContextX on BuildContext {
     if (isDesktop) {
       return textTheme.labelLarge;
     } else if (isTablet) {
-      return textTheme.labelLarge?.copyWith(fontSize: 16);
-    } else {
       return textTheme.labelLarge?.copyWith(fontSize: 14);
+    } else {
+      return textTheme.labelLarge?.copyWith(fontSize: 12);
     }
   }
 
@@ -86,9 +86,9 @@ extension ContextX on BuildContext {
     if (isDesktop) {
       return textTheme.labelMedium;
     } else if (isTablet) {
-      return textTheme.labelMedium?.copyWith(fontSize: 14);
-    } else {
       return textTheme.labelMedium?.copyWith(fontSize: 12);
+    } else {
+      return textTheme.labelMedium?.copyWith(fontSize: 10);
     }
   }
 
@@ -96,9 +96,9 @@ extension ContextX on BuildContext {
     if (isDesktop) {
       return textTheme.labelSmall;
     } else if (isTablet) {
-      return textTheme.labelSmall?.copyWith(fontSize: 12);
-    } else {
       return textTheme.labelSmall?.copyWith(fontSize: 10);
+    } else {
+      return textTheme.labelSmall?.copyWith(fontSize: 8);
     }
   }
 }

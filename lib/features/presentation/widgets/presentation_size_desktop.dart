@@ -8,12 +8,22 @@ class PresentationSizeDesktop extends StatelessWidget {
     return SizedBox(
       height: context.height * 0.8,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Expanded(flex: 5, child: const _ProfileImage()),
-              width30,
+              Container(
+                alignment: Alignment.topCenter,
+
+                constraints: BoxConstraints(
+                  minWidth: context.width * 0.15,
+                  maxWidth: context.width * 0.2,
+                ),
+                child: const _ProfileImage(),
+              ),
+              const Spacer(),
               Expanded(
                 flex: 7,
                 child: Column(

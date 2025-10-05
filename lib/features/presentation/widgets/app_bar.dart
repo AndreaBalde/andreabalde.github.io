@@ -7,14 +7,9 @@ class DesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       actions: context.isDesktop ? desktopActions(context) : mobileActions(),
-      title: Row(
-        children: [
-          width30,
-          Text(
-            '<Andrea Baldessin />',
-            style: context.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
-          ),
-        ],
+      title: Text(
+        '<Andrea Baldessin />',
+        style: context.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
       ),
       backgroundColor: Color(0xFF2c2c2c),
     );
@@ -47,7 +42,7 @@ class DesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
     return [
       IconButton(
         onPressed: () {},
-        icon: const Icon(Icons.menu_rounded, color: Colors.white),
+        icon: const Icon(Icons.menu_rounded, color: Color(0xFFe0e0e0)),
       ),
       width10,
     ];
