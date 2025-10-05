@@ -6,15 +6,19 @@ import 'package:my_portfolio/core/utils/assets.dart';
 import 'package:my_portfolio/core/utils/context_x.dart';
 import 'package:my_portfolio/core/utils/globals.dart';
 import 'package:my_portfolio/core/utils/link.dart';
-import 'package:responsive_framework/responsive_framework.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 part 'widgets/profile/link_button.dart';
 part 'widgets/presentation.dart';
 part 'widgets/profile/profile_image.dart';
-part 'widgets/profile/profile_identifier.dart';
+part 'widgets/profile/profile_identifier_title.dart';
+part 'widgets/profile/profile_identifier_description.dart';
+part 'widgets/presentation_size_mobile.dart';
+part 'widgets/presentation_size_tablet.dart';
+part 'widgets/presentation_size_desktop.dart';
 part 'widgets/profile/link_buttons.dart';
 part 'widgets/app_bar.dart';
+part 'widgets/footer.dart';
 
 class PortfolioPage extends StatefulWidget {
   const PortfolioPage({super.key});
@@ -24,7 +28,25 @@ class PortfolioPage extends StatefulWidget {
 }
 
 class _PortfolioPageState extends State<PortfolioPage> {
-  bool get isDesktop => ResponsiveBreakpoints.of(context).largerThan(TABLET);
+  EdgeInsetsGeometry get padding {
+    if (context.isMobile) {
+      return EdgeInsets.symmetric(
+        horizontal: context.width * 0.02,
+        vertical: context.height * 0.02,
+      );
+    } else if (context.isTablet) {
+      return EdgeInsets.symmetric(
+        horizontal: context.width * 0.05,
+        vertical: context.height * 0.03,
+      );
+    } else {
+      return EdgeInsets.symmetric(
+        horizontal: context.width * 0.1,
+        vertical: context.height * 0.05,
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,8 +54,19 @@ class _PortfolioPageState extends State<PortfolioPage> {
 
       body: Container(
         width: double.infinity,
+        height: double.infinity,
         color: Color(0xFF181818),
-        child: Stack(children: [const Presentation()]),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: padding,
+                child: Column(children: [const Presentation()]),
+              ),
+              const Footer(),
+            ],
+          ),
+        ),
       ),
     );
   }

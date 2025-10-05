@@ -1,7 +1,7 @@
 part of '../../portfolio_page.dart';
 
-class _ProfileIdentifier extends StatelessWidget {
-  const _ProfileIdentifier();
+class _ProfileIdentifierDescription extends StatelessWidget {
+  const _ProfileIdentifierDescription();
 
   @override
   Widget build(BuildContext context) {
@@ -13,24 +13,6 @@ class _ProfileIdentifier extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          RichText(
-            text: TextSpan(
-              children: [
-                TextSpan(
-                  text: "Hi,",
-                  style: context.headlineLarge?.copyWith(
-                    color: Color(0xFF388e3c),
-                  ),
-                ),
-                TextSpan(text: " I'm Andrea", style: context.headlineLarge),
-              ],
-            ),
-          ),
-          Text(
-            "Mobile App Developer",
-            style: context.headlineSmall?.copyWith(color: Color(0xFF388e3c)),
-          ),
-          height30,
           Text(
             "I'm a dedicated and passionate Mobile App Developer with a strong focus on creating intuitive and high-performance applications. "
             "My journey into the world of programming started with a fascination for how technology can solve real-world problems.\n\n"
