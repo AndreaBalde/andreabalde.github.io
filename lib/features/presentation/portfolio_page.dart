@@ -1,24 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show Clipboard, ClipboardData;
-import 'package:flutter_svg/svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_portfolio/core/presentation/tablet/tablet.dart';
 import 'package:my_portfolio/core/utils/assets.dart';
 import 'package:my_portfolio/core/utils/context_x.dart';
 import 'package:my_portfolio/core/utils/globals.dart';
-import 'package:my_portfolio/core/utils/link.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:my_portfolio/core/presentation/desktop/desktop.dart';
+import 'package:my_portfolio/core/presentation/mobile/mobile.dart';
+import 'package:my_portfolio/core/widgets/desktop/app_bar.dart';
+import 'package:my_portfolio/core/widgets/footer.dart';
+import 'package:my_portfolio/core/widgets/mobile/app_bar.dart';
 
-part 'widgets/profile/link_button.dart';
-part 'widgets/presentation.dart';
+part 'presentation_tile.dart';
 part 'widgets/profile/profile_image.dart';
 part 'widgets/profile/profile_identifier_title.dart';
 part 'widgets/profile/profile_identifier_description.dart';
-part 'mobile/presentation.dart';
-part 'tablet/presentation.dart';
-part 'desktop/presentation.dart';
-part 'desktop/link_buttons.dart';
-part 'widgets/app_bar.dart';
-part 'widgets/footer.dart';
 
 class PortfolioPage extends StatefulWidget {
   const PortfolioPage({super.key});
@@ -50,8 +44,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const DesktopAppBar(),
-
+      appBar: context.isDesktop ? const AppBarDesktop() : const AppBarMobile(),
       body: Container(
         width: double.infinity,
         height: double.infinity,

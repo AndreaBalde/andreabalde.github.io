@@ -1,7 +1,7 @@
 part of '../../portfolio_page.dart';
 
-class _ProfileIdentifierDescription extends StatelessWidget {
-  const _ProfileIdentifierDescription();
+class ProfileIdentifierDescription extends StatelessWidget {
+  const ProfileIdentifierDescription({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +17,6 @@ class _ProfileIdentifierDescription extends StatelessWidget {
           "I believe in continuous learning and am always looking for new challenges to grow as a developer and as a person.",
           style: context.bodyLarge?.copyWith(height: 1.5),
         ),
-        height20,
-        _LinkButtons(),
       ],
     );
   }

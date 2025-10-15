@@ -1,4 +1,4 @@
-part of '../portfolio_page.dart';
+import 'package:flutter/material.dart';
 
 class Footer extends StatelessWidget {
   const Footer({super.key});

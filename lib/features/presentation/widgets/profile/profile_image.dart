@@ -1,7 +1,7 @@
 part of '../../portfolio_page.dart';
 
-class _ProfileImage extends StatelessWidget {
-  const _ProfileImage();
+class ProfileImage extends StatelessWidget {
+  const ProfileImage({super.key});
 
   BorderRadius get borderRadius => BorderRadius.circular(1000.0);
 

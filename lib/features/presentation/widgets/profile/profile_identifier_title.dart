@@ -1,7 +1,7 @@
 part of '../../portfolio_page.dart';
 
-class _ProfileIdentifierTitle extends StatelessWidget {
-  const _ProfileIdentifierTitle();
+class ProfileIdentifierTitle extends StatelessWidget {
+  const ProfileIdentifierTitle({super.key});
 
   @override
   Widget build(BuildContext context) {

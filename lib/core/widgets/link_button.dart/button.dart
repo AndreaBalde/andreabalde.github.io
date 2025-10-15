@@ -1,4 +1,4 @@
-part of '../../portfolio_page.dart';
+part of 'link_button.dart';
 
 class _LinkButton extends StatefulWidget {
   const _LinkButton({

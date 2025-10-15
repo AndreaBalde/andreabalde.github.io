@@ -1,4 +1,4 @@
-part of '../portfolio_page.dart';
+part of 'mobile.dart';
 
 class PresentationMobile extends StatelessWidget {
   const PresentationMobile({super.key});
@@ -11,13 +11,15 @@ class PresentationMobile extends StatelessWidget {
       children: [
         Row(
           children: [
-            Expanded(flex: 3, child: const _ProfileImage()),
+            Expanded(flex: 3, child: const ProfileImage()),
             width20,
-            Expanded(flex: 8, child: const _ProfileIdentifierTitle()),
+            Expanded(flex: 8, child: const ProfileIdentifierTitle()),
           ],
         ),
         height20,
-        const _ProfileIdentifierDescription(),
+        const ProfileIdentifierDescription(),
+        height20,
+        _LinkButtonsMobile(),
       ],
     );
   }

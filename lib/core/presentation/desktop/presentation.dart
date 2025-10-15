@@ -1,4 +1,4 @@
-part of '../portfolio_page.dart';
+part of 'desktop.dart';
 
 class PresentationDesktop extends StatelessWidget {
   const PresentationDesktop({super.key});
@@ -19,7 +19,7 @@ class PresentationDesktop extends StatelessWidget {
                 minWidth: context.width * 0.15,
                 maxWidth: context.width * 0.2,
               ),
-              child: const _ProfileImage(),
+              child: const ProfileImage(),
             ),
             const Spacer(),
             Expanded(
@@ -28,9 +28,11 @@ class PresentationDesktop extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  const _ProfileIdentifierTitle(),
+                  const ProfileIdentifierTitle(),
                   height20,
-                  const _ProfileIdentifierDescription(),
+                  const ProfileIdentifierDescription(),
+                  height20,
+                  _LinkButtonsDesktop(),
                 ],
               ),
             ),
