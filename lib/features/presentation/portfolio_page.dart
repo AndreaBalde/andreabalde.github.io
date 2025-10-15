@@ -13,10 +13,10 @@ part 'widgets/presentation.dart';
 part 'widgets/profile/profile_image.dart';
 part 'widgets/profile/profile_identifier_title.dart';
 part 'widgets/profile/profile_identifier_description.dart';
-part 'widgets/presentation_size_mobile.dart';
-part 'widgets/presentation_size_tablet.dart';
-part 'widgets/presentation_size_desktop.dart';
-part 'widgets/profile/link_buttons.dart';
+part 'mobile/presentation.dart';
+part 'tablet/presentation.dart';
+part 'desktop/presentation.dart';
+part 'desktop/link_buttons.dart';
 part 'widgets/app_bar.dart';
 part 'widgets/footer.dart';
 
@@ -31,7 +31,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
   EdgeInsetsGeometry get padding {
     if (context.isMobile) {
       return EdgeInsets.symmetric(
-        horizontal: context.width * 0.02,
+        horizontal: context.width * 0.06,
         vertical: context.height * 0.02,
       );
     } else if (context.isTablet) {
@@ -58,11 +58,13 @@ class _PortfolioPageState extends State<PortfolioPage> {
         color: Color(0xFF181818),
         child: SingleChildScrollView(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Padding(
                 padding: padding,
                 child: Column(children: [const Presentation()]),
               ),
+              height50,
               const Footer(),
             ],
           ),

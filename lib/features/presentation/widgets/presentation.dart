@@ -6,11 +6,11 @@ class Presentation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (context.isMobile) {
-      return const PresentationSizeMobile();
+      return const PresentationMobile();
     } else if (context.isTablet) {
-      return const PresentationSizeTablet();
+      return const PresentationTablet();
     } else {
-      return const PresentationSizeDesktop();
+      return const PresentationDesktop();
     }
   }
 }

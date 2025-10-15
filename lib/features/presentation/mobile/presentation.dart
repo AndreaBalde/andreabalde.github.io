@@ -1,7 +1,7 @@
 part of '../portfolio_page.dart';
 
-class PresentationSizeMobile extends StatelessWidget {
-  const PresentationSizeMobile({super.key});
+class PresentationMobile extends StatelessWidget {
+  const PresentationMobile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,11 +11,12 @@ class PresentationSizeMobile extends StatelessWidget {
       children: [
         Row(
           children: [
-            Expanded(flex: 4, child: const _ProfileImage()),
-            width10,
-            Expanded(flex: 7, child: const _ProfileIdentifierTitle()),
+            Expanded(flex: 3, child: const _ProfileImage()),
+            width20,
+            Expanded(flex: 8, child: const _ProfileIdentifierTitle()),
           ],
         ),
+        height20,
         const _ProfileIdentifierDescription(),
       ],
     );

@@ -1,6 +1,6 @@
 part of '../../portfolio_page.dart';
 
-class _LinkButton extends StatelessWidget {
+class _LinkButton extends StatefulWidget {
   const _LinkButton({
     required this.icon,
     required this.onPressed,
@@ -11,12 +11,25 @@ class _LinkButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String name;
 
-  final size = 45.0;
+  @override
+  State<_LinkButton> createState() => _LinkButtonState();
+}
+
+class _LinkButtonState extends State<_LinkButton> {
+  double get size {
+    if (context.isMobile) {
+      return 35;
+    } else if (context.isTablet) {
+      return 40;
+    } else {
+      return 45;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return Tooltip(
-      message: name,
+      message: widget.name,
       child: Container(
         height: size,
         width: size,
@@ -24,7 +37,11 @@ class _LinkButton extends StatelessWidget {
           color: const Color(0xFF388e3c),
           borderRadius: BorderRadius.circular(100),
         ),
-        child: IconButton(icon: icon, onPressed: onPressed),
+        child: IconButton(
+          icon: widget.icon,
+          onPressed: widget.onPressed,
+          iconSize: size * 0.5,
+        ),
       ),
     );
   }

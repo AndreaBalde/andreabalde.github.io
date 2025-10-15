@@ -9,7 +9,7 @@ class PortfolioApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'My Portfolio',
+      title: "Balde's Portfolio",
       theme: ThemeData(
         primarySwatch: Colors.green,
         textTheme: textTheme,
@@ -29,40 +29,42 @@ class PortfolioApp extends StatelessWidget {
   }
 }
 
-TextTheme get textTheme => const TextTheme(
+final _textColor = const Color(0xFFe0e0e0);
+
+TextTheme get textTheme => TextTheme(
   headlineLarge: TextStyle(
     fontSize: 40,
-    color: Color(0xFFe0e0e0),
+    color: _textColor,
     fontWeight: FontWeight.bold,
   ),
   headlineMedium: TextStyle(
     fontSize: 32,
-    color: Color(0xFFe0e0e0),
+    color: _textColor,
     fontWeight: FontWeight.w600,
   ),
   headlineSmall: TextStyle(
     fontSize: 24,
-    color: Color(0xFFe0e0e0),
+    color: _textColor,
     fontWeight: FontWeight.w600,
   ),
   bodyLarge: TextStyle(
     fontSize: 18,
-    color: Color(0xFFe0e0e0),
+    color: _textColor,
     fontWeight: FontWeight.w500,
   ),
   bodyMedium: TextStyle(
     fontSize: 16,
-    color: Color(0xFFe0e0e0),
+    color: _textColor,
     fontWeight: FontWeight.w500,
   ),
   bodySmall: TextStyle(
     fontSize: 14,
-    color: Color(0xFFe0e0e0),
+    color: _textColor,
     fontWeight: FontWeight.w500,
   ),
   labelLarge: TextStyle(
     fontSize: 16,
-    color: Color(0xFFe0e0e0),
+    color: _textColor,
     fontWeight: FontWeight.w500,
   ),
 );
